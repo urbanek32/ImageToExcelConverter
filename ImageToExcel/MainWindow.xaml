@@ -1,0 +1,24 @@
+﻿<Window x:Class="ImageToExcel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImageToExcel Converter" Height="332.448" Width="441.372" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,4,-1">
+        <Button x:Name="loadButton" Content="Load Image File" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="-0.492,-1.433" Click="loadButton_Click"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="56" Margin="10,213,0,0" VerticalAlignment="Top" Width="411" Foreground="#FF00AEFF"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="321,15,0,0" VerticalAlignment="Top" Width="100" IsEnabled="False" Click="startButton_Click"/>
+        <Image x:Name="previewImage" Height="137" Margin="212,45,10,0" VerticalAlignment="Top"/>
+        <Label x:Name="stateLabel" Content="&lt;= Select file to process" HorizontalAlignment="Left" Margin="117,15,0,0" Width="199" Background="White" Foreground="#FFF00000" FontWeight="Bold" TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Preview" HorizontalAlignment="Left" Margin="212,182,0,0" VerticalAlignment="Top" Width="209" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <GroupBox x:Name="optionsGroupBox" Header="Options" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="137" Width="197">
+            <Grid HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="204" Margin="-7,0,-12,-12">
+                <Label x:Name="optionsStatus" Content="Label" HorizontalAlignment="Left" Margin="0,93,0,0" VerticalAlignment="Top" Width="194" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="24" FontSize="11"/>
+                <Label Content="Columns Width" HorizontalAlignment="Left" Margin="1,14,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.488,0.529" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <Slider x:Name="columnSlider" HorizontalAlignment="Left" Margin="96,18,0,0" VerticalAlignment="Top" Width="98" TickPlacement="TopLeft" Minimum="0.1" Maximum="3" AutoToolTipPlacement="TopLeft" Value="0.3" LargeChange="0.1" TickFrequency="0.01" ValueChanged="columnSlider_ValueChanged" SmallChange="0.01"/>
+                <Label Content="Rows Height" HorizontalAlignment="Left" Margin="1,45,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.488,0.529" HorizontalContentAlignment="Right"/>
+                <Slider x:Name="rowSlider" HorizontalAlignment="Left" Margin="96,45,0,0" VerticalAlignment="Top" Width="98" TickPlacement="TopLeft" Minimum="0.1" Maximum="3" AutoToolTipPlacement="TopLeft" Value="2" LargeChange="0.1" TickFrequency="0.01" ValueChanged="rowSlider_ValueChanged" SmallChange="0.01"/>
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
